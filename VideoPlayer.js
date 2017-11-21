@@ -829,7 +829,7 @@ export default class VideoPlayer extends Component {
                     marginTop: this.animations.topControl.marginTop,
                 }
             ]}>
-                <ImageBackground
+                <Image
                     source={require('./assets/img/top-vignette.png')}
                     style={[styles.controls.column, styles.controls.vignette,
                     ]}>
@@ -840,7 +840,7 @@ export default class VideoPlayer extends Component {
                             {this.renderFullscreen()}
                         </View>
                     </View>
-                </ImageBackground>
+                </Image>
             </Animated.View>
         );
     }
@@ -911,7 +911,7 @@ export default class VideoPlayer extends Component {
                     marginBottom: this.animations.bottomControl.marginBottom,
                 }
             ]}>
-                <ImageBackground
+                <Image
                     source={require('./assets/img/bottom-vignette.png')}
                     style={[styles.controls.column, styles.controls.vignette,
                     ]}>
@@ -924,7 +924,7 @@ export default class VideoPlayer extends Component {
                         {this.renderTitle()}
                         {this.renderTimer()}
                     </View>
-                </ImageBackground>
+                </Image>
             </Animated.View>
         );
     }
