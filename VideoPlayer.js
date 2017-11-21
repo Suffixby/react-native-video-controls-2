@@ -626,7 +626,7 @@ export default class VideoPlayer extends Component {
      * @return {float} volume level based on volume handle position
      */
     calculateVolumeFromVolumePosition() {
-        return this.state.volumePosition / this.player.volumeWidth;
+        return this.state.volumePosition / this.player.volumeWidth - 0.1;
     }
 
     /**
