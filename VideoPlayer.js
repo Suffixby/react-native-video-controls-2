@@ -687,7 +687,8 @@ export default class VideoPlayer extends Component {
      */
     initSeekPanResponder() {
         this.player.seekPanResponder = PanResponder.create({
-
+            onPanResponderTerminationRequest: () => false,
+            onStartShouldSetPanResponderCapture: () => true,
             // Ask to be the responder.
             onStartShouldSetPanResponder: (evt, gestureState) => true,
             onMoveShouldSetPanResponder: (evt, gestureState) => true,
@@ -738,6 +739,8 @@ export default class VideoPlayer extends Component {
      */
     initVolumePanResponder() {
         this.player.volumePanResponder = PanResponder.create({
+            onPanResponderTerminationRequest: () => false,
+            onStartShouldSetPanResponderCapture: () => true,
             onStartShouldSetPanResponder: (evt, gestureState) => true,
             onMoveShouldSetPanResponder: (evt, gestureState) => true,
             onPanResponderGrant: (evt, gestureState) => {
